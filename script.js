@@ -70,6 +70,8 @@ async function checkWeather(city) {
 
     var data = await response.json();
 
+    console.log(data);
+
     console.log("🌤️ Weather Condition Detected:", data.weather[0].main);
 
 
