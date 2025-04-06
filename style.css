@@ -16,15 +16,17 @@ body{
 
 .card{
     width: 90%;
-    max-width: 470px;
+    max-width: 400px;
     background: linear-gradient(135deg, #a8d3c8, #2d4e41);
     color: #fff;
     border-radius: 20px;
-    padding: 40px 35px;
+    padding: 20px 25px;
     margin: 100px auto 0;
+    margin-bottom: 3rem;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
+
 .search{
     width: 100%;
     display: flex;
@@ -50,13 +52,17 @@ body{
     
 }
 .search button {
-    border: 0;
-    outline: 0;
+    border: none;
+    outline: none;
+    padding: 12px;
     background-color: #ebfffc;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .search button img{
     width :20px;
@@ -67,9 +73,35 @@ body{
 }
 
 
+.suggestions-list {
+    list-style: none;
+    margin: 5px 0 0;
+    padding: 0;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    position: absolute;
+    z-index: 1000;
+    overflow: hidden;
+  }
+  
+  .suggestions-list li {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .suggestions-list li:hover {
+    background-color: #ebfffc;
+  }
+  
+
+
 .weather-icon{
-    width: 170px;
-    margin: 30px;
+    width: 100px;
+    margin: 10px;
 }
 .weather h1{
     font-size: 80px;
@@ -87,6 +119,7 @@ body{
     justify-content: space-between;
     padding: 0 20px;
     margin-top: 50px;
+    gap:20px;
 }
 .col{
     display: flex;
@@ -94,7 +127,7 @@ body{
     text-align: center;
 }
 .col img{
-    width: 40px;
+    width: 30px;
     margin-right: 10px;
 }
 .humidity , .wind{
@@ -119,6 +152,34 @@ body{
 
 
 /* Media Queries for Responsiveness */
+
+@media (max-width: 480px) {
+    .card {
+      padding: 15px 20px;
+    }
+  
+    .weather-icon {
+      width: 80px;
+    }
+  
+    .temp {
+      font-size: 2rem;
+    }
+  
+    .city {
+      font-size: 1.2rem;
+    }
+  
+    .details {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .col img {
+      width: 25px;
+    }
+  }
+  
 
 /* For small devices (phones, less than 600px) */
 @media (max-width: 600px) {
@@ -253,3 +314,4 @@ body{
         font-size: 14px;
     }
 }
+
