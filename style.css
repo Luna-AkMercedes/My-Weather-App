@@ -29,19 +29,23 @@ body{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;  
+    justify-content: space-between; 
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow: hidden; 
     text-decoration-color: #404040; 
 }
 .search input{
+    min-width: 0;
     border: 0;
     outline: 0;
     background-color: #ebfffc;
-    color: #3e3e3e;
-    padding: 10px 25px;
+    color: #3c3b3b;
+    padding: 10px 20px;
     height: 60px;
     border-radius: 30px;
     flex: 1;
-    margin-right: 16px;
+    /*margin-right: 16px;*/
     font-size: 18px;
     
 }
@@ -131,8 +135,13 @@ body{
     }
 
     .search button {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .search img {
+        width: 15px;
+        
     }
 
     .weather-icon {
@@ -244,64 +253,3 @@ body{
         font-size: 14px;
     }
 }
-
-/* For medium devices (tablets, 600px to 1024px) */
-@media (min-width: 600px) and (max-width: 1024px) {
-    .card {
-        width: 80%;
-        padding: 30px;
-    }
-
-    .search input {
-        font-size: 16px;
-        height: 55px;
-    }
-
-    .search button {
-        width: 55px;
-        height: 55px;
-    }
-
-    .weather-icon {
-        width: 150px;
-    }
-
-    .weather h1 {
-        font-size: 60px;
-    }
-
-    .weather h2 {
-        font-size: 40px;
-    }
-
-    .details {
-        padding: 0 10px;
-    }
-    .humidity, .wind {
-        font-size: 28px;
-    }
-}
-
-/* For large devices (desktops, more than 1024px) */
-@media (min-width: 1024px) {
-    .card {
-        width: 60%;
-        max-width: 600px;
-    }
-
-    .search input {
-        font-size: 18px;
-        height: 60px;
-    }
-    .search button {
-        width: 60px;
-        height: 60px;
-    }
-
-    .weather-icon {
-        width: 170px;
-    }
-
-    .weather h1 {
-        font-size: 80px;
-    }
